@@ -6,8 +6,12 @@ import { ChevronRight, Home } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
-
-const ProductPage = async({params}:{params:{id:string}}) => {
+type PageProps = {
+    params: {
+      id: string;
+    };
+  };
+const ProductPage = async({params}:PageProps) => {
     const { id } =await params;
     const product =await getProductById(id);
 
