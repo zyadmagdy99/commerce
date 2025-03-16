@@ -12,7 +12,7 @@ type PageProps = {
     };
   };
 const ProductPage = async({params}:PageProps) => {
-    const { id } =await params;
+    const { id } =params;
     const product =await getProductById(id);
 
     if(!product.price){
